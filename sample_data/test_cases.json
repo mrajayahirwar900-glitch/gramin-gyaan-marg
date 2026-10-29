@@ -1,0 +1,58 @@
+```json
+{
+  "project": "Gramin Gyaan Marg",
+  "sample_courses": [
+    {
+      "id": "CRS-101",
+      "title": "BCA (Bachelor of Computer Applications)",
+      "duration": "3 Years",
+      "eligibility": "10+2 with Mathematics/Computer",
+      "key_subjects": ["Data Structures", "Web Development", "Database Systems"],
+      "career_options": ["Software Developer", "Web Designer", "System Analyst"],
+      "recommended_institution": "Shri Krishna University, Chhatarpur"
+    },
+    {
+      "id": "CRS-102",
+      "title": "Diploma in Solar & Renewable Energy",
+      "duration": "1 Year",
+      "eligibility": "10th Pass",
+      "key_subjects": ["Solar Panel Installation", "Electrical Basics", "Maintenance"],
+      "career_options": ["Solar Technician", "Field Supervisor"],
+      "recommended_institution": "ITI Chhatarpur"
+    }
+  ],
+  "sample_scholarships": [
+    {
+      "id": "SCH-MP-2026",
+      "name": "MP Post Matric Scholarship Scheme for SC/ST/OBC",
+      "offered_by": "Government of Madhya Pradesh",
+      "eligibility_criteria": {
+        "state": "Madhya Pradesh",
+        "category": ["SC", "ST", "OBC"],
+        "max_annual_family_income_inr": 300000
+      },
+      "benefits": "Full tuition fee waiver + Monthly maintenance allowance",
+      "application_link": "https://scholarshipportal.mp.nic.in"
+    }
+  ],
+  "test_cases": [
+    {
+      "test_id": "TC_AUTH_01",
+      "module": "User Registration",
+      "description": "Verify student registration with a valid Indian mobile number and password.",
+      "expected_result": "User registered successfully, JWT token issued, user directed to onboarding dashboard."
+    },
+    {
+      "test_id": "TC_SCH_02",
+      "module": "Scholarship Filter",
+      "description": "Filter scholarship list by state = 'Madhya Pradesh' and category = 'OBC'.",
+      "expected_result": "Returns 'MP Post Matric Scholarship Scheme' in under 300ms."
+    },
+    {
+      "test_id": "TC_OFFLINE_03",
+      "module": "Offline Content Access",
+      "description": "Access previously saved course roadmap without active internet connection.",
+      "expected_result": "Service worker serves cached JSON data from LocalStorage without network error."
+    }
+  ]
+}
